@@ -28,4 +28,48 @@
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
 
+const dog = {
+    species: 'dog',
+    name: 'Joey',
+    gender: 'male',
+    legs: 4,
+    hands: 0,
+    saying: 'woof-woof!',
+    friends: 'Phoebe, Chandler'
+};
 
+const cat = {
+    species: 'cat',
+    name: 'Phoebe',
+    gender: 'female',
+    legs: 4,
+    hands: 0,
+    saying: 'miaaaaaw!',
+    friends: 'Joey, Monica'
+};
+
+const woman = {
+    species: 'human',
+    name: 'Monica',
+    gender: 'female',
+    legs: 2,
+    hands: 2,
+    saying: 'Hi, Chandler!',
+    friends: 'Phoebe, Chandler'
+};
+
+const man = {
+    species: 'human',
+    name: 'Chandler',
+    gender: 'male',
+    legs: 2,
+    hands: 2,
+    saying: 'Hi, Monica!',
+    friends: 'Monica, Joey'
+};
+
+function printInhabitant(obj) {
+    print([obj.species, obj.name, obj.gender, obj.legs, obj.hands, obj.saying, obj.friends].join("; "));
+}
+
+[dog, cat, man, woman].forEach(printInhabitant);
